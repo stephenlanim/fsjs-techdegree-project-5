@@ -24,8 +24,8 @@ const createProfile = (qty)=> {
     // Create card-info-container and nested text
     const $cardInfo = $('<div></div>').attr('class', 'card-info-container');
     const $cardName = $('<h3></h3>').attr('id', 'name').attr('class', 'card-name cap');
-    const $cardEmail = $('<p></p>').attr('class', 'card-text');
-    const $cardLocation = $('<p></p>').attr('class', 'card-text cap');
+    const $cardEmail = $('<p></p>').attr('class', 'card-text email');
+    const $cardLocation = $('<p></p>').attr('class', 'card-text cap city');
 
     // Append Nested Items
     $cardImgCntnr.append($cardImg);

@@ -26,13 +26,13 @@ const createModal = (qty)=> {
     const $modalInfo = $('<div></div>').attr('class', 'modal-info-container');
 
     // Create nest modal info elements
-    const $modalImg = $('<img>').attr('class', 'card-img').attr('src', 'https://placehold.it/125x125').attr('alt', 'profile picture');
+    const $modalImg = $('<img>').attr('class', 'modal-img').attr('src', 'https://placehold.it/125x125').attr('alt', 'profile picture');
     const $modalName = $('<h3></h3>').attr('class', 'modal-name cap').attr('id', 'name');
-    const $modalEmail = $('<p></p>').attr('class', 'modal-text');
-    const $modalCity =$('<p></p>').attr('class', 'modal-text cap');
-    const $modalPhone =$('<p></p>').attr('class', 'modal-text');
-    const $modalAddress =$('<p></p>').attr('class', 'modal-text');
-    const $modalBDay =$('<p></p>').attr('class', 'modal-text');
+    const $modalEmail = $('<p></p>').attr('class', 'modal-text email').attr('class', '');
+    const $modalCity =$('<p></p>').attr('class', 'modal-text cap city');
+    const $modalPhone =$('<p></p>').attr('class', 'modal-text phone');
+    const $modalAddress =$('<p></p>').attr('class', 'modal-text address');
+    const $modalBDay =$('<p></p>').attr('class', 'modal-text birthday');
 
     // Append nested modal elements
     $modalInfo.append($modalImg, $modalName, $modalEmail, $modalCity, $modalPhone, $modalAddress, $modalBDay);

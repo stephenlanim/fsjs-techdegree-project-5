@@ -7,7 +7,7 @@ let $dcImage;
 let $dcName;
 let $dcEmail;
 let $dcCity;
-let $dcUsername;
+// let $dcUsername;
 
 // Get modal-card targets
 let $mcImage;
@@ -48,21 +48,21 @@ fetchData('https://randomuser.me/api/?results=12&nat=us')
       sourceBirthday = formatBirthday(staff.dob.date);
       sourceUsername = staff.login.username;
 
-      // Get directory-card targets
-      $dcImage = $('.directory-card .photo').eq(currentStaff);
-      $dcName = $('.directory-card .name').eq(currentStaff);
-      $dcEmail = $('.directory-card .email').eq(currentStaff);
-      $dcCity = $('.directory-card .city').eq(currentStaff);
-      $dcUsername = $('.directory-card .username').eq(currentStaff);
+      // Get gallery card targets
+      $dcImage = $('.card .card-img').eq(currentStaff);
+      $dcName = $('.card .card-name').eq(currentStaff);
+      $dcEmail = $('.card .email').eq(currentStaff);
+      $dcCity = $('.card .city').eq(currentStaff);
+      // $dcUsername = $('.card .username').eq(currentStaff);
 
       // Get modal-card targets
-      $mcImage = $('.modal-card .photo').eq(currentStaff);
-      $mcName = $('.modal-card .name').eq(currentStaff);
-      $mcEmail = $('.modal-card .email').eq(currentStaff);
-      $mcCity = $('.modal-card .city').eq(currentStaff);
-      $mcPhone = $('.modal-card .phone').eq(currentStaff);
-      $mcAddress = $('.modal-card .address').eq(currentStaff);
-      $mcBirthday = $('.modal-card .birthday').eq(currentStaff);
+      $mcImage = $('.modal .modal-img').eq(currentStaff);
+      $mcName = $('.modal .modal-name').eq(currentStaff);
+      $mcEmail = $('.modal .email').eq(currentStaff);
+      $mcCity = $('.modal .city').eq(currentStaff);
+      $mcPhone = $('.modal .phone').eq(currentStaff);
+      $mcAddress = $('.modal .address').eq(currentStaff);
+      $mcBirthday = $('.modal .birthday').eq(currentStaff);
 
       insertRandomEmployees(staff);
     }); // end of map()
@@ -73,7 +73,7 @@ fetchData('https://randomuser.me/api/?results=12&nat=us')
 // Function to insert random staff data into directory-cards and modal-cards
 function insertRandomEmployees(staff) {
 
-  insertUsername();
+  // insertUsername();
   insertBasicInfo($dcImage, $dcName, $dcEmail, $dcCity);
   insertModalInfo();
 
@@ -81,9 +81,9 @@ function insertRandomEmployees(staff) {
 
 
 // Function to insert employee username
-function insertUsername() {
-  $dcUsername.text(`${sourceUsername}`);
-}
+// function insertUsername() {
+//   $dcUsername.text(`${sourceUsername}`);
+// }
 
 
 // Function for inserting basic employee info
