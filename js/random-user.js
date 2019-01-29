@@ -29,7 +29,7 @@ let sourceAddress;
 let sourceBirthday;
 let sourceUsername;
 
-// Note: Initializing variables inside of any functions only made them accessible to that function and not any nested functions, despitethe fact that nested functions should have access to variables from parent functions. The solution was to initialize these variables on a global scope and update their values after the data was fetched.
+// Note: Initializing variables inside of any functions only made them accessible to that function and not any nested functions, despite the fact that nested functions should have access to variables from parent functions. The solution was to initialize these variables on a global scope and update their values after the data was fetched.
 
 // Fetch JSON data for 12 staffs from Random staff API
 fetchData('https://randomuser.me/api/?results=12&nat=us')

@@ -18,8 +18,8 @@ const createProfile = (qty)=> {
     const $card = $('<div></div>').attr('class', 'card');
 
     // Create card-image-container and nested image
-    const $cardImgCntr = $('<div></div>').attr('class', 'card-img-container');
-    const $cardImg = $('<img>').attr('class', 'card-img').attr('src', 'https://placehold.it/90x90" alt="profile picture');
+    const $cardImgCntnr = $('<div></div>').attr('class', 'card-img-container');
+    const $cardImg = $('<img>').attr('class', 'card-img').attr('src', 'https://placehold.it/90x90').attr('alt', 'profile picture');
 
     // Create card-info-container and nested text
     const $cardInfo = $('<div></div>').attr('class', 'card-info-container');
@@ -27,10 +27,10 @@ const createProfile = (qty)=> {
     const $cardEmail = $('<p></p>').attr('class', 'card-text');
     const $cardLocation = $('<p></p>').attr('class', 'card-text cap');
 
-    // Append Nest Items
-    $cardImgCntr.append($cardImg);
-    $cardInfo.append($cardName).append($cardEmail).append($cardLocation);
-    $card.append($cardImgCntr).append($cardInfo);
+    // Append Nested Items
+    $cardImgCntnr.append($cardImg);
+    $cardInfo.append($cardName, $cardEmail, $cardLocation);
+    $card.append($cardImgCntnr, $cardInfo);
 
     // Append Items to Gallery
     $('#gallery').append($card);
