@@ -16,7 +16,9 @@ html, body {
 body {
     font-family: "Nunito", sans-serif;
     text-align: center;
-    background: rgba(235, 235, 235, 0.9);
+    /* background: rgba(235, 235, 235, 0.9); */
+		/* background: #ccdaff; */
+		background: #D7D9CE;
 }
 
 header {
@@ -29,7 +31,7 @@ header {
 }
 
 header h1 {
-    font-size: 1.25em;
+    font-size: 1.5em;
     color: rgba(50, 50, 50, 0.9);
     margin-top: 35px;
 }
@@ -87,9 +89,14 @@ header h1 {
     max-width: 360px;
     margin: 10px 10px 20px;
     padding: 10px;
-    background: rgba(245, 245, 245, 0.9);
+    /* background: rgba(245, 245, 245, 0.9); */
+		/* background: #e6edff; */
+		/* background: #D7D9CE; */
+		background: #F1F3E8;
     border-radius: 0.25em;
-    border: 1px solid rgba(50, 50, 50, 0.3);
+    /* border: 1px solid rgba(50, 50, 50, 0.3); */
+		/* border: 1px solid #5585ff; */
+		border: 1px solid #A4A69B;
     transition: .4s ease-out;
     overflow: hidden;
 }
@@ -110,7 +117,8 @@ header h1 {
 
 .card-text {
     font-size: 0.9em;
-    color: rgba(50, 50, 50, 0.7);
+    color: rgba(50, 50, 50, 0.9);
+		/* color: #2274A5; */
     margin: 7px auto;
     transition: .4s ease-out;
 }
@@ -145,9 +153,11 @@ header h1 {
     min-height: 415px;
     margin: 10px auto auto;
     padding-bottom: 15px;
-    background: rgba(255, 255, 255, 1);
+    /* background: rgba(255, 255, 255, 1); */
+		background: #F1F3E8;
     border-radius: 0.25em;
-    border: 1px solid rgba(100, 100, 100, 0.3);
+    /* border: 1px solid rgba(100, 100, 100, 0.3); */
+		border: 1px solid #A4A69B;
     transition: .4s ease-out;
 
 
@@ -163,6 +173,7 @@ header h1 {
     outline: none;
     border-radius: 0.25em;
     border: 1px solid rgba(50, 50, 50, 0.3);
+		transition: .4s ease-out;
 }
 
 .modal-img {
@@ -176,7 +187,7 @@ header h1 {
 }
 
 .modal-text {
-    color: rgba(50, 50, 50, 0.7);
+    color: rgba(50, 50, 50, 0.9);
     margin: 10px;
 }
 
@@ -195,9 +206,11 @@ header h1 {
     max-width: 420px;
     padding: 10px 15px 15px;;
     margin: 10px auto auto;
-    background: rgba(255, 255, 255, 1);
+    /* background: rgba(255, 255, 255, 1); */
+		background: #F1F3E8;
     border-radius: 0.25em;
-    border: 1px solid rgba(100, 100, 100, 0.3);
+    /* border: 1px solid rgba(100, 100, 100, 0.3); */
+		border: 1px solid #A4A69B;
 }
 
 
@@ -263,7 +276,7 @@ header h1 {
         color: rgba(25, 25, 25, 1);
     }
 
-    .btn:hover {
+    .btn:hover, .modal-close-btn:hover {
         background: rgba(255, 255, 255, 1);
         color: rgba(25, 25, 25, 1);
     }
