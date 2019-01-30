@@ -2,20 +2,19 @@
     Employee Directory Filter
    ====================================== */
 
-const $filter = $('#filter');
-const $profile = $('.staff-profile');
+const $filter = $('#search-input');
+const $profile = $('.card');
 
 // Begin filter after each typed character in input
 $filter.on('keyup', function () {
 
-  // For each staff profile
+  // For each profile
   $profile.each( function () {
-    const $userName = $(this).find('.username').text().toLowerCase();
-    const $employeeName = $(this).find('.name').text().toLowerCase();
+    const $employeeName = $(this).find('.card-name').text().toLowerCase();
     const $userInput = $filter.val().toLowerCase();
 
-    // if employee's name or username matches user's filter input
-    if ($employeeName.includes($userInput) || $userName.includes($userInput)) {
+    // if employee's name matches user's filter input
+    if ($employeeName.includes($userInput)) {
     // show profile
     $(this).show();
     }
