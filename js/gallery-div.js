@@ -15,7 +15,7 @@ const createProfile = (qty)=> {
   for (let i = 0; i < qty; i++) {
 
     // Create card
-    const $card = $('<div></div>').attr('class', 'card');
+    const $card = $('<div></div>').attr('class', 'card modal-trigger');
 
     // Create card-image-container and nested image
     const $cardImgCntnr = $('<div></div>').attr('class', 'card-img-container');

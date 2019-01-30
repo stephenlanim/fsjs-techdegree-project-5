@@ -19,6 +19,7 @@ const createModal = (qty)=> {
   for (let i = 0; i < qty; i++) {
 
     // Create modal
+    const $modalGrouper = $('<div></div>').attr('class', 'modal-grouper');
     const $modal = $('<div></div>').attr('class', 'modal');
 
     // Create nested modal elements
@@ -38,16 +39,18 @@ const createModal = (qty)=> {
     $modalInfo.append($modalImg, $modalName, $modalEmail, $modalCity, $modalPhone, $modalAddress, $modalBDay);
     $modal.append($modalBtn, $modalInfo);
 
+
     // Create button container and nested elements
     const $btnCntnr = $('<div></div>').attr('class', 'modal-btn-container');
-    const $prevBtn = $('<button></button>').attr('type', 'button').attr('id', 'modal-prev').attr('class', 'modal-prev').text('Prev');
-    const $nextBtn = $('<button></button>').attr('type', 'button').attr('id', 'modal-next').attr('class', 'modal-next').text('Next');
+    const $prevBtn = $('<button></button>').attr('type', 'button').attr('id', 'modal-prev').attr('class', 'modal-prev btn').text('Prev');
+    const $nextBtn = $('<button></button>').attr('type', 'button').attr('id', 'modal-next').attr('class', 'modal-next btn').text('Next');
 
     // Append nested button elements
     $btnCntnr.append($prevBtn, $nextBtn);
 
     // Append all modal elements to container
-    $modalCntnr.append($modal, $btnCntnr);
+    $modalGrouper.append($modal, $btnCntnr);
+    $modalCntnr.append($modalGrouper);
 
   } // end of for loop
 

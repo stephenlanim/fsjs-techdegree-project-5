@@ -1,0 +1,104 @@
+/* =====================================
+   Modal Slideshow
+======================================== */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ths document creates CSS animations intended to be used for opening modals and animating a slideshow between modals.
+
+Use this stylesheet in conjunction with the stylesheet modal-slideshow.js for the modal and slideshow functionality.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* === .modal-content-window animation === */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+	}
+}
+
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+
+  }
+  to {
+    opacity: 0;
+    margin-right: 100%;
+		/* display: none; */
+	}
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    margin-left: 100%;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+	}
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    margin-left: 0;
+  }
+  to {
+    opacity: 0;
+    margin-left: 100%;
+	}
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    margin-right: 100%;
+  }
+  to {
+    opacity: 1;
+		margin-right: 0;
+	}
+}
+
+/* ___ End of animation classes ___ */
+
+/* === Animation Classes === */
+.modalOpen {
+	animation-name: modalopen;
+	animation-duration: 0.75s;
+	animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.slideOutLeft {
+	animation-name: slideOutLeft;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+
+.slideInLeft {
+	animation-name: slideInLeft;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+
+.slideOutRight {
+	animation-name: slideOutRight;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+
+.slideInRight {
+	animation-name: slideInRight;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+}
+
+/* ___ End of animation classes ___ */
