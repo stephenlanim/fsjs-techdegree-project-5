@@ -12,15 +12,15 @@
 const createModal = (qty)=> {
 
   // Create modal container
-  const $modalCntnr = $('<div></div>').attr('class', 'modal-container');
+  const $modalCntnr = $('<div></div>').attr('class', 'modal-bkgrnd');
   // Note: Might need to move this back inside the loop to group individual sets of modal elements. But maybe not.
 
   // Create modals by the indicated quantity
   for (let i = 0; i < qty; i++) {
 
     // Create modal
-    const $modalGrouper = $('<div></div>').attr('class', 'modal-grouper');
     const $modal = $('<div></div>').attr('class', 'modal');
+    const $modalCard = $('<div></div>').attr('class', 'modal-card');
 
     // Create nested modal elements
     const $modalBtn = $('<button></button>').attr('type', 'button').attr('id', 'modal-close-btn').attr('class', 'modal-close-btn').html('&#10006;');
@@ -37,7 +37,7 @@ const createModal = (qty)=> {
 
     // Append nested modal elements
     $modalInfo.append($modalImg, $modalName, $modalEmail, $modalCity, $modalPhone, $modalAddress, $modalBDay);
-    $modal.append($modalBtn, $modalInfo);
+    $modalCard.append($modalBtn, $modalInfo);
 
 
     // Create button container and nested elements
@@ -49,8 +49,8 @@ const createModal = (qty)=> {
     $btnCntnr.append($prevBtn, $nextBtn);
 
     // Append all modal elements to container
-    $modalGrouper.append($modal, $btnCntnr);
-    $modalCntnr.append($modalGrouper);
+    $modal.append($modalCard, $btnCntnr);
+    $modalCntnr.append($modal);
 
   } // end of for loop
 

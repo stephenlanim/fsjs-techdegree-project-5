@@ -124,7 +124,7 @@ header h1 {
    Modal
 ======================================== */
 
-.modal-container {
+.modal-bkgrnd {
 		display: none;
     position: fixed;
     top: 0;
@@ -134,11 +134,11 @@ header h1 {
     background: rgba(0, 0, 0, 0.7);
 }
 
-.modal-grouper {
+.modal {
 	display: none;
 }
 
-.modal {
+.modal-card {
     position: relative;
     width: 95%;
     max-width: 420px;
@@ -180,7 +180,7 @@ header h1 {
     margin: 10px;
 }
 
-.modal hr {
+.modal-card hr {
     width: 75%;
     margin: 25px auto 30px;
     border-color: rgba(200, 200, 200, 0.2);
@@ -241,7 +241,7 @@ header h1 {
         margin-top: 25px;
     }
 
-    .modal {
+    .modal-card {
         margin-top: 100px;
     }
 }

@@ -56,13 +56,13 @@ fetchData('https://randomuser.me/api/?results=12&nat=us')
       // $dcUsername = $('.card .username').eq(currentStaff);
 
       // Get modal-card targets
-      $mcImage = $('.modal .modal-img').eq(currentStaff);
-      $mcName = $('.modal .modal-name').eq(currentStaff);
-      $mcEmail = $('.modal .email').eq(currentStaff);
-      $mcCity = $('.modal .city').eq(currentStaff);
-      $mcPhone = $('.modal .phone').eq(currentStaff);
-      $mcAddress = $('.modal .address').eq(currentStaff);
-      $mcBirthday = $('.modal .birthday').eq(currentStaff);
+      $mcImage = $('.modal-card .modal-img').eq(currentStaff);
+      $mcName = $('.modal-card .modal-name').eq(currentStaff);
+      $mcEmail = $('.modal-card .email').eq(currentStaff);
+      $mcCity = $('.modal-card .city').eq(currentStaff);
+      $mcPhone = $('.modal-card .phone').eq(currentStaff);
+      $mcAddress = $('.modal-card .address').eq(currentStaff);
+      $mcBirthday = $('.modal-card .birthday').eq(currentStaff);
 
       insertRandomEmployees(staff);
     }); // end of map()
