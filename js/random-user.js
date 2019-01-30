@@ -7,7 +7,6 @@ let $dcImage;
 let $dcName;
 let $dcEmail;
 let $dcCity;
-// let $dcUsername;
 
 // Get modal-card targets
 let $mcImage;
@@ -19,6 +18,7 @@ let $mcAddress;
 let $mcBirthday;
 
 // Initialize variables for Fetch data properties
+let currentStaff;
 let sourceImage;
 let sourceName;
 let sourceEmail;
@@ -27,7 +27,6 @@ let sourcePhone;
 let parsedPhone;
 let sourceAddress;
 let sourceBirthday;
-let sourceUsername;
 
 // Note: Initializing variables inside of any functions only made them accessible to that function and not any nested functions, despite the fact that nested functions should have access to variables from parent functions. The solution was to initialize these variables on a global scope and update their values after the data was fetched.
 
@@ -46,14 +45,12 @@ fetchData('https://randomuser.me/api/?results=12&nat=us')
       parsedPhone = `tel:+1${parsePhoneNumber(staff.phone)}`;
       sourceAddress = `${staff.location.street}, ${staff.location.city}, ${staff.location.state} ${staff.location.postcode}`;
       sourceBirthday = formatBirthday(staff.dob.date);
-      sourceUsername = staff.login.username;
 
       // Get gallery card targets
       $dcImage = $('.card .card-img').eq(currentStaff);
       $dcName = $('.card .card-name').eq(currentStaff);
       $dcEmail = $('.card .email').eq(currentStaff);
       $dcCity = $('.card .city').eq(currentStaff);
-      // $dcUsername = $('.card .username').eq(currentStaff);
 
       // Get modal-card targets
       $mcImage = $('.modal-card .modal-img').eq(currentStaff);
@@ -73,18 +70,10 @@ fetchData('https://randomuser.me/api/?results=12&nat=us')
 // Function to insert random staff data into directory-cards and modal-cards
 function insertRandomEmployees(staff) {
 
-  // insertUsername();
   insertBasicInfo($dcImage, $dcName, $dcEmail, $dcCity);
   insertModalInfo();
 
 }
-
-
-// Function to insert employee username
-// function insertUsername() {
-//   $dcUsername.text(`${sourceUsername}`);
-// }
-
 
 // Function for inserting basic employee info
 function insertBasicInfo (imageTarget, nameTarget,  emailTarget, cityTarget) {
@@ -117,7 +106,6 @@ function insertModalInfo() {
   $mcBirthday.text(`${sourceBirthday}`);
 } // end of insertModalInfo()
 
-
 // Function for parsing phone number
 function parsePhoneNumber(phoneString) {
   // Split phone number string into an array of individual string characters
@@ -147,44 +135,4 @@ function formatBirthday(birthday) {
   const day = birthday.substring(8, 10);
 
   return `${month}/${day}/${year}`;
-}
-
-
-// 09-27-2018: I only realized in the afternoon, after working on this function for an hour that the CSS property value text-transform: capitalize does what I need this function to do. I may complete this function later for fun.
-// Function to capitalize employee data
-function capitalize(dataString) {
-  // Capitalize the first letter in the data string
-  let cappedString = dataString;
-
-  // If first character is not a number...
-  if (isNaN(cappedString[0])) {
-    cappedString = dataString[0].toUpperCase() + dataString.substring(1);
-  }
-
-  // If string does not contain a space...
-  if (!cappedString.includes(' ')) {
-    //
-    return cappedString;
-  }
-  else {
-    // Split word(s) from data into an array of individual characters
-    const splitData = cappedString.split('');
-
-    // Loop to find letters to be capitalized
-    const multiCap =
-      // Loop over split data
-      splitData.forEach( char => {
-        // If the character before this one is a space
-        if (char.index() === ' ') {
-          // Capitalize this character
-          this.toUpperCase();
-
-        }
-
-      });
-      // Join characters back into a string
-      cappedString = multiCap.join('');
-      return cappedString;
-
-  } // end of else statement
 }

@@ -37,7 +37,7 @@ const createProfile = (qty)=> {
 
   } // end of for loop
 
-} // end of createProfile()
+}; // end of createProfile()
 
 // Create 12 Employee Profiles
 createProfile(12);

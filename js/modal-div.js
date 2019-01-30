@@ -57,7 +57,7 @@ const createModal = (qty)=> {
   // Append modal container to DOM
   $('#gallery').after($modalCntnr);
 
-} // end of createModal()
+}; // end of createModal()
 
 // Create 12 Modals
 createModal(12);
