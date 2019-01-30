@@ -29,7 +29,7 @@ const createModal = (qty)=> {
     // Create nest modal info elements
     const $modalImg = $('<img>').attr('class', 'modal-img').attr('src', 'https://placehold.it/125x125').attr('alt', 'profile picture');
     const $modalName = $('<h3></h3>').attr('class', 'modal-name cap');
-    const $modalEmail = $('<p></p>').attr('class', 'modal-text email').attr('class', '');
+    const $modalEmail = $('<p></p>').attr('class', 'modal-text email');
     const $modalCity =$('<p></p>').attr('class', 'modal-text cap city');
     const $modalPhone =$('<p></p>').attr('class', 'modal-text phone');
     const $modalAddress =$('<p></p>').attr('class', 'modal-text address');
